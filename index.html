@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Jemmotte - Home Page</title>
+    <meta name="description" content="Personal portfolio home page showcasing courses and projects">
+    <meta name="author" content="Adrian Jemmotte">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+        <span>Adrian Jemmotte</span>
+        <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+    </header>
+    <nav id="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>About Me</h2>
+            <p>This is a placeholder for my about me section content.</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <p>This is a placeholder for my projects section content.</p>
+        </section>
+        <section id="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all-courses">All Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+            </div>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+            <div id="courses-container"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/jemrai" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            <a href="https://linkedin.com/in/adrian-jemmotteg" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+            <a href="https://github.com/jemrai" target="_blank" aria-label="Instagram">
+                <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+        <div>
+            <p>&copy; <span id="currentyear"></span> Adrian Jemmotte, Bolivar</p>
+        </div>
+        <div>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
