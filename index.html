@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian Jemmotte - Home Page</title>
-    <meta name="description" content="Personal portfolio home page showcasing courses and projects">
+    <title>Home - WDD231</title>
+    <meta name="description" content="Home page for WDD231 course, showcasing projects and course information.">
     <meta name="author" content="Adrian Jemmotte">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
-        <span>Adrian Jemmotte</span>
+        <img src="images/logo.svg" alt="Site Logo" class="logo">
+        <span class="name">Adrian Jemmotte</span>
         <button id="hamburger" aria-label="Toggle Navigation">☰</button>
     </header>
-    <nav id="navigation">
+    <nav id="nav-menu">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Chamber</a></li>
@@ -28,38 +31,39 @@
     <main>
         <h1>Home</h1>
         <section>
-            <h2>About Me</h2>
-            <p>This is a placeholder for my about me section content.</p>
+            <h2>Welcome</h2>
+            <p>I’m Adrian Jemmotte. At 27 years old, I’ve learned that the best way to live life is by finding a balance between personal passions, physical health, and the people who make it all worthwhile.
+                Music has always been a cornerstone of my life. I find a unique sense of peace and expression when I’m sitting at the piano or playing the guitar.</p>
         </section>
-        <section>
-            <h2>Projects</h2>
-            <p>This is a placeholder for my projects section content.</p>
-        </section>
-        <section id="certificate">
-            <h2>Web and Computer Programming Certificate</h2>
+        <section id="courses">
+            <h2>Courses</h2>
             <div class="filter-buttons">
                 <button id="all-courses">All Courses</button>
                 <button id="wdd-courses">WDD Courses</button>
                 <button id="cse-courses">CSE Courses</button>
             </div>
+            <div id="course-cards"></div>
             <p>Total Credits: <span id="total-credits">0</span></p>
-            <div id="courses-container"></div>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <p>This is a placeholder for my projects section content.</p>
         </section>
     </main>
     <footer>
         <div class="social-links">
-            <a href="https://github.com/jemrai" target="_blank" aria-label="GitHub">
-                <img src="images/github.svg" alt="GitHub" width="24" height="24">
+            <a href="https://github.com/jemrai/wdd231" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" class="social-icon">
             </a>
-            <a href="https://linkedin.com/in/adrian-jemmotteg" target="_blank" aria-label="LinkedIn">
-                <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            <a href="https://www.linkedin.com/in/adrian-jemmotteg" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" class="social-icon">
             </a>
-            <a href="https://github.com/jemrai" target="_blank" aria-label="Instagram">
-                <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+            <a href="https://github.com/jemrai/wdd231" target="_blank" aria-label="Twitter">
+                <img src="images/instagram.svg" alt="Twitter" class="social-icon">
             </a>
         </div>
         <div>
-            <p>&copy; <span id="currentyear"></span> Adrian Jemmotte, Bolivar</p>
+            <p>&copy; <span id="year"></span> Adrian Jemmotte, Bolivar</p>
         </div>
         <div>
             <p id="lastModified"></p>
