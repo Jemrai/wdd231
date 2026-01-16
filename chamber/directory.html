@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio | Timbuktu Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+    <div class="logo-area">
+        <img src="images/logo.svg" alt="Logo" class="icon">
+        <h1>Timbuktu Chamber</h1>
+    </div>
+    <button id="menu-button" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+   
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="hero-placeholder">
+        <p>scalable, responsive hero image</p>
+        <button class="hero-btn">Keynote Tickets</button>
+    </div>
+
+    <main>
+        <h2>Home / Directory</h2>
+        
+        <div class="view-controls">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+
+        <div id="members" class="grid">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <strong>Timbuktu Chamber of Commerce</strong><br>
+            10 Rue De La Paix<br>
+            Timbuktu, Mali 999<br>
+            info@timbuktucc.org<br>
+            (223) 555-2300
+        </div>
+        <div class="footer-social">
+            <img src="images/github.svg" alt="GitHub">
+            <img src="images/linkedin.svg" alt="LinkedIn">
+            <img src="images/instagram.svg" alt="Instagram">
+        </div>
+        <div class="footer-info">
+            <p>WDD231 Class Project</p>
+            <p>Adrian Jemmotte</p>
+            <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="data/members.js"></script>
+</body>
+</html>

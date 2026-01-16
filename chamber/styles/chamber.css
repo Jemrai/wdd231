@@ -1,0 +1,210 @@
+/* Estilos Generales */
+body { font-family: Arial, sans-serif; margin: 0; background-color: #fff; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+header ul { display: flex; list-style: none; gap: 15px; }
+
+/* Hero Area similar al Wireframe */
+.hero-placeholder {
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+
+.hero-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    padding: 10px 20px;
+    background: #bbb;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Directorio - Grid de Tarjetas */
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#members section {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+#members section h3 { background: #d0d0d0; padding: 5px; margin: -15px -15px 15px -15px; border-radius: 15px 15px 0 0; }
+
+.member-info-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+}
+
+.member-info-container img {
+    width: 100px;
+    height: 100px;
+    background-color: #999;
+}
+
+/* Footer Estilo Wireframe */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #ddd;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.footer-social { display: flex; justify-content: center; gap: 10px; }
+.footer-social img { width: 40px; border-radius: 50%; }
+.footer-info { text-align: right; }
+
+/* --- Estilos para la Vista de Lista --- */
+.list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0; /* Sin espacio entre filas para un look de tabla */
+    padding: 20px;
+}
+
+.list section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 0;
+    border-radius: 0; /* Bordes rectos para la lista */
+    border-bottom: 1px solid #bbb;
+    background-color: #fff; /* Fondo blanco para contraste */
+    text-align: left;
+}
+
+/* Ocultar elementos innecesarios en la lista para ahorrar espacio */
+.list section h3 {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    flex: 1; /* El nombre toma el espacio disponible */
+}
+
+.list section .member-info-container img, 
+.list section hr,
+.list section p:first-of-type { 
+    display: none; /* Oculta logo y tagline en lista */
+}
+
+.list section .member-info-container {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.list section div p {
+    margin: 0 10px;
+    display: inline-block; /* Pone email, teléfono y URL en una línea */
+}
+
+/* Estilo cebra (filas alternas) para mejor lectura */
+.list section:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* --- Navegación Móvil (Base) --- */
+#menu-button {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+
+/* Crear las líneas del icono hamburguesa */
+#menu-button span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: 0.3s;
+}
+
+/* Escondemos el menú por defecto en móvil */
+#nav-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #eee;
+    position: absolute;
+    top: 70px; /* Ajustar según altura de tu header */
+    left: 0;
+    z-index: 1000;
+}
+
+/* Clase para mostrar el menú cuando se hace click */
+#nav-menu.show {
+    display: flex;
+}
+
+#nav-menu li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+/* --- Pantallas Grandes (Desktop) --- */
+@media (min-width: 768px) {
+    #menu-button {
+        display: none; /* Escondemos el botón en desktop */
+    }
+
+    #nav-menu {
+        display: flex !important; /* Siempre visible */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    #nav-menu li a {
+        border: none;
+    }
+}
+
+
+.logo-area {
+    display: flex;
+    align-items: center;  
+    gap: 10px; 
+}

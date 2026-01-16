@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Ejemplo Empresa",
+        "tagline": "Lo mejor en servicios",
+        "image": "images/logo1.jpg",
+        "email": "info@empresa.com",
+        "phone": "(123) 456-7890",
+        "website": "https://empresa.com"
+    }
+    ,
+    
+    {
+        "name": "Ejemplo Empresa",
+        "tagline": "Lo mejor en servicios",
+        "image": "images/logo1.jpg",
+        "email": "info@empresa.com",
+        "phone": "(123) 456-7890",
+        "website": "https://empresa.com"
+    }
+    
+]
