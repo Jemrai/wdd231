@@ -1,4 +1,4 @@
-/* Estilos Generales */
+
 body { font-family: Arial, sans-serif; margin: 0; background-color: #fff; }
 
 header {
@@ -11,7 +11,7 @@ header {
 
 header ul { display: flex; list-style: none; gap: 15px; }
 
-/* Hero Area similar al Wireframe */
+
 .hero-placeholder {
     height: 300px;
     background-color: #f0f0f0;
@@ -34,7 +34,7 @@ header ul { display: flex; list-style: none; gap: 15px; }
     border-radius: 10px;
 }
 
-/* Directorio - Grid de Tarjetas */
+
 #members.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -64,7 +64,7 @@ header ul { display: flex; list-style: none; gap: 15px; }
     background-color: #999;
 }
 
-/* Footer Estilo Wireframe */
+
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -79,11 +79,11 @@ footer {
 .footer-social img { width: 40px; border-radius: 50%; }
 .footer-info { text-align: right; }
 
-/* --- Estilos para la Vista de Lista --- */
+
 .list {
     display: flex !important;
     flex-direction: column;
-    gap: 0; /* Sin espacio entre filas para un look de tabla */
+    gap: 0; 
     padding: 20px;
 }
 
@@ -93,25 +93,25 @@ footer {
     align-items: center;
     padding: 10px 15px;
     margin: 0;
-    border-radius: 0; /* Bordes rectos para la lista */
+    border-radius: 0; 
     border-bottom: 1px solid #bbb;
-    background-color: #fff; /* Fondo blanco para contraste */
+    background-color: #fff; 
     text-align: left;
 }
 
-/* Ocultar elementos innecesarios en la lista para ahorrar espacio */
+
 .list section h3 {
     background: none;
     margin: 0;
     padding: 0;
     font-size: 1.1rem;
-    flex: 1; /* El nombre toma el espacio disponible */
+    flex: 1; 
 }
 
 .list section .member-info-container img, 
 .list section hr,
 .list section p:first-of-type { 
-    display: none; /* Oculta logo y tagline en lista */
+    display: none; 
 }
 
 .list section .member-info-container {
@@ -123,15 +123,15 @@ footer {
 
 .list section div p {
     margin: 0 10px;
-    display: inline-block; /* Pone email, teléfono y URL en una línea */
+    display: inline-block; 
 }
 
-/* Estilo cebra (filas alternas) para mejor lectura */
+
 .list section:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* --- Navegación Móvil (Base) --- */
+
 #menu-button {
     display: block;
     font-size: 2rem;
@@ -144,7 +144,7 @@ footer {
     height: 44px;
 }
 
-/* Crear las líneas del icono hamburguesa */
+
 #menu-button span {
     display: block;
     width: 30px;
@@ -154,7 +154,7 @@ footer {
     transition: 0.3s;
 }
 
-/* Escondemos el menú por defecto en móvil */
+
 #nav-menu {
     display: none;
     list-style: none;
@@ -164,12 +164,12 @@ footer {
     width: 100%;
     background-color: #eee;
     position: absolute;
-    top: 70px; /* Ajustar según altura de tu header */
+    top: 70px; 
     left: 0;
     z-index: 1000;
 }
 
-/* Clase para mostrar el menú cuando se hace click */
+
 #nav-menu.show {
     display: flex;
 }
@@ -183,14 +183,13 @@ footer {
     border-bottom: 1px solid #ccc;
 }
 
-/* --- Pantallas Grandes (Desktop) --- */
 @media (min-width: 768px) {
     #menu-button {
-        display: none; /* Escondemos el botón en desktop */
+        display: none; 
     }
 
     #nav-menu {
-        display: flex !important; /* Siempre visible */
+        display: flex !important; 
         flex-direction: row;
         position: static;
         width: auto;
