@@ -15,7 +15,7 @@ const displayMembers = (members) => {
         // Estructura interna de la tarjeta para que coincida con la imagen
         card.innerHTML = `
             <h3>${member.name}</h3>
-            <p><em>${member.tagline || 'Business Tag Line'}</em></p>
+            <p><em>${member.level || 'Business Tag Line'}</em></p>
             <hr>
             <div class="member-info-container">
                 <img src="${member.image}" alt="${member.name}">

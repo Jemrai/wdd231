@@ -39,7 +39,7 @@ header ul { display: flex; list-style: none; gap: 15px; }
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 50px;
 }
 
 #members section {
