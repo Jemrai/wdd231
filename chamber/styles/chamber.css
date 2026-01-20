@@ -1,5 +1,11 @@
+/* Importante: Usa Google Fonts en lugar de Arial */
+body { 
+    font-family: 'Roboto', Arial, sans-serif; 
+    margin: 0; 
+    background-color: #fff; 
+}
 
-body { font-family: Arial, sans-serif; margin: 0; background-color: #fff; }
+/* Resto del CSS permanece igual... */
 
 header {
     display: flex;
