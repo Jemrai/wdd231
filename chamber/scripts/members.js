@@ -62,18 +62,3 @@ navLinks.forEach(link => {
         menuButton.classList.remove("open");  
     });
 });
-const weatherApiKey = "e87ea539f703dbcdb502bfaa0b650fe4"; // Reemplaza con tu clave API
-const cityId = "5604473"; // Reemplaza con el ID de tu ciudad
-async function getWeather() {
-    try {
-        const currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${weatherApiKey}`);
-        const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${cityId}&units=metric&appid=${weatherApiKey}`);  
-        if (!currentResponse.ok || !forecastResponse.ok) throw new Error('Failed to load weather data');
-        const currentData = await currentResponse.json();
-        const forecastData = await forecastResponse.json();
-        displayWeather(currentData, forecastData);
-    } catch (error) {
-        console.error(error);
-        document.getElementById('weather-data').innerHTML = '<p>Unable to load weather data.</p>';
-    }
-}

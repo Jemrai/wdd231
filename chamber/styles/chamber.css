@@ -40,9 +40,9 @@ header ul { display: flex; list-style: none; gap: 15px; }
 
 #members.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr 1fr));
     gap: 20px;
-    padding: 50px;
+    padding: 60px;
 }
 
 #members section {
@@ -308,6 +308,6 @@ footer {
         gap: 20px;
     }
     .hero, .events, .weather, .spotlights {
-        grid-column: span 2; /* Ajusta según necesidad */
+        grid-column: span 2;
     }
 }
