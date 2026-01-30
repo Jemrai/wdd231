@@ -1,7 +1,7 @@
-// Weather API - Usando lat/lon para Timbuktu (Mali)
-const weatherApiKey = "e87ea539f703dbcdb502bfaa0b650fe4"; // Reemplaza con tu clave real de OpenWeatherMap
-const lat = 16.77; // Latitud de Timbuktu
-const lon = -3.01; // Longitud de Timbuktu
+
+const weatherApiKey = "e87ea539f703dbcdb502bfaa0b650fe4"; 
+const lat = 16.77; 
+const lon = -3.01; 
 
 async function getWeather() {
     try {
@@ -24,7 +24,7 @@ function displayWeather(current, forecast) {
     const temp = Math.round(current.main.temp);
     const desc = current.weather[0].description;
     
-    // Pronóstico de 3 días (cada 8 horas, toma el primero de cada día)
+
     const days = forecast.list.filter((item, index) => index % 8 === 0).slice(0, 3);
     const forecastHtml = days.map(day => `<p>${new Date(day.dt * 1000).toDateString()}: ${Math.round(day.main.temp)}°C</p>`).join('');
     
@@ -105,4 +105,4 @@ document.getElementById('timestamp').value = new Date().toISOString();
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
-// Redirección automática a una página de real estate al cargar la página
+
