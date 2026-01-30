@@ -77,3 +77,31 @@ getSpotlights();
 // Footer dinámico
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
+
+const menuButton = document.querySelector("#menu-button");
+const navMenu = document.querySelector("#nav-menu");
+
+if (menuButton && navMenu) {
+    menuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+        menuButton.classList.toggle("open"); 
+    });
+} else {
+    console.error("Error: No se encontró el botón del menú o el menú de navegación.");
+}
+
+
+const navLinks = document.querySelectorAll("#nav-menu a");
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("show"); 
+        menuButton.classList.remove("open"); 
+    });
+});
+
+
+document.getElementById('timestamp').value = new Date().toISOString();
+
+
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
