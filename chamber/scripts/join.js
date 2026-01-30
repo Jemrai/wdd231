@@ -105,3 +105,4 @@ document.getElementById('timestamp').value = new Date().toISOString();
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
+// Redirección automática a una página de real estate al cargar la página

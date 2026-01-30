@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for applying to the Real Estate Club. Review your submitted membership application details and next steps.">
+    <meta name="author" content="Adrian Jemmotte">
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Thank You - Real Estate Club Membership">
+    <meta property="og:description" content="Your Real Estate Club membership application has been submitted. Check your details and get ready to join exclusive events.">
+    <meta property="og:image" content="https://yourdomain.com/images/real-estate.jpg"> <!-- Imagen de real estate -->
+    <meta property="og:url" content="https://yourdomain.com/thankyou.html"> <!-- URL de esta página -->
+    <title>Thank You - Real Estate Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/join.css"> 
+    <link rel="stylesheet" href="styles/thankyou.css"> 
+</head>
+<body>
+    
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.svg" alt="Real Estate Club Logo" width="50">
+            <h1>Real Estate Club</h1>
+        </div>
+        <nav>
+            <button id="menu-button" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Thank You for Applying!</h2>
+        <p>Your application has been submitted successfully. Here is a summary of your submitted information:</p>
+        <div class="thankyou-info">
+            <ol id="submitted-data">
+                <!-- Los datos se insertarán aquí vía JavaScript -->
+            </ol>
+        </div>
+        <p>If you have any questions, contact us at info@reeac.org.</p>
+    </main>
+
+    <!-- Footer (usa tu template) -->
+    <footer>
+        <div class="footer-contact">
+            <strong>Real Estate Club</strong><br>
+            10 Rue De La Paix<br>
+            Real, Mali 999<br>
+            info@reeac.org<br>
+            (223) 555-2300
+        </div>
+        <div class="footer-social">
+            <img src="images/github.svg" alt="GitHub">
+            <img src="images/linkedin.svg" alt="LinkedIn">
+            <img src="images/instagram.svg" alt="Instagram">
+        </div>
+        <div class="footer-info">
+            <p>WDD231 Class Project</p>
+            <p>Adrian Jemmotte</p>
+            <p>&copy; <span id="year"></span> Real Estate Club</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/thankyou.js"></script> 
+</body>
+</html>
