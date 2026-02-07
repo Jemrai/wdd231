@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover - Real Estate Club</title>
+  <link rel="stylesheet" href="styles/discover.css">
+  <script src="scripts/discover.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="../images/logo.svg" alt="Real Estate Club Logo" width="50">
+      <h1>Real Estate Club</h1>
+    </div>
+    <nav>
+      <button id="menu-button" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../directory.html">Directory</a></li>
+        <li><a href="../join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Discover Real Estate Opportunities</h1>
+      <p>Explore featured properties, neighborhoods, and investments in our area. Join the Real Estate Club to connect with experts and opportunities.</p>
+      <div id="visit-message"></div>
+    </section>
+
+    <section class="cards-grid" id="cards-container">
+      <!-- Las 8 tarjetas se generan dinámicamente con JS -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-contact">
+      <strong>Real Estate Club</strong><br>
+      10 Rue De La Paix<br>
+      Real, Mali 999<br>
+      info@reeac.org<br>
+      (223) 555-2300
+    </div>
+    <div class="footer-social">
+      <img src="../images/github.svg" alt="GitHub">
+      <img src="../images/linkedin.svg" alt="LinkedIn">
+      <img src="../images/instagram.svg" alt="Instagram">
+    </div>
+    <div class="footer-info">
+      <p>WDD231 Class Project</p>
+      <p>Adrian Jemmotte</p>
+      <p>&copy; <span id="year"></span> Real Estate Club</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
