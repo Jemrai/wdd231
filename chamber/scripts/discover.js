@@ -52,3 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
   displayVisitMessage();
   generateCards();
 });
+// Función para alternar el menú hamburguesa en móviles
+document.getElementById('menu-button').addEventListener('click', () => {
+  const navMenu = document.getElementById('nav-menu');
+  navMenu.classList.toggle('show');
+});
