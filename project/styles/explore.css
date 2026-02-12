@@ -1,0 +1,237 @@
+
+body { 
+    font-family: 'Roboto', Arial, sans-serif; 
+    margin: 0; 
+    background-color: #fff; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+header ul { display: flex; list-style: none; gap: 15px; }
+
+.hero-placeholder {
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+
+.hero-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    padding: 10px 20px;
+    background: #bbb;
+    border: none;
+    border-radius: 10px;
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #ddd;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+.footer-social { display: flex; justify-content: center; gap: 10px; }
+.footer-social img { width: 40px; border-radius: 50%; }
+.footer-info { text-align: right; }
+
+#menu-button {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+
+#menu-button span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: 0.3s;
+}
+
+#nav-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #eee;
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    z-index: 1000;
+}
+
+#nav-menu.show {
+    display: flex;
+}
+
+#nav-menu li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 768px) {
+    #menu-button {
+        display: none; 
+    }
+
+    #nav-menu {
+        display: flex !important; 
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    #nav-menu li a {
+        border: none;
+    }
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;  
+    gap: 10px; 
+}
+
+
+/* Estilos adicionales para pantallas miniatura (móviles, max-width: 767px) */
+@media (max-width: 767px) {
+    /* Header: Ajustar padding y logo para pantallas pequeñas */
+    header {
+        padding: 0.5rem; 
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    .logo-area {
+        gap: 5px; 
+    }
+    .logo-area img {
+        width: 40px; 
+    }
+    .logo-area h1 {
+        font-size: 1.2rem; 
+    }
+    #nav-menu {
+        top: 60px; 
+    }
+
+    /* Footer: Cambiar a una columna para móviles */
+    footer {
+        grid-template-columns: 1fr 1fr 1fr; 
+        padding: 15px; 
+        font-size: 0.8rem; 
+        text-align: center; 
+    }
+    .footer-contact, .footer-social, .footer-info {
+        margin-bottom: 10px; 
+    }
+    .footer-social img {
+        width: 30px; 
+    }
+}
+
+
+/* Contenedor de tarjetas (grid responsivo) */
+.cards-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 10px 0; 
+    width: 100%; 
+}
+
+@media (max-width: 767px) {
+    .cards-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+/* Estilos de tarjeta */
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+.card figure {
+    margin: 0;
+}
+.card figure img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card address {
+    font-style: normal;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.card p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+.card button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.card button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

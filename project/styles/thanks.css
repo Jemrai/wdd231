@@ -1,0 +1,10 @@
+/* CSS adicional para thankyou.html */
+.thankyou-info {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px;
+}
+.thankyou-info p {
+    margin: 10px 0;
+}

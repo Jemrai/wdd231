@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Coca-Cola FEMSA",
+        "level": "Membersihp: Gold",
+        "image": "images/cocacola.webp",
+        "email": "i@empresacocacola.com",
+        "phone": "(123) 456-7890",
+        "website": "https://coca-colafemsa.com/"
+    }
+    ,
+    
+    {
+        "name": "Nestle S.A",
+        "level": "Membersihp: Silver",
+        "image": "images/nestle.webp",
+        "email": "i@empresanestle.com",
+        "phone": "(123) 456-7860",
+        "website": "https://www.nestle.com.ve/"
+    }
+     ,
+    
+    {
+        "name": "Alimentos Polar",
+        "level": "Membersihp: Gold",
+        "image": "images/polar.webp",
+        "email": "i@empresapolar.com",
+        "phone": "(123) 456-7872",
+        "website": "https://ve.allofpan.com/nosotros-2/"
+    }
+     ,
+    
+    {
+        "name": "Samsung Electronics",
+        "level": "Membersihp: Silver",
+        "image": "images/samsung.webp",
+        "email": "samsung@gmail.com",
+        "phone": "(123) 456-7843",
+        "website": "https://www.samsung.com/latin/"
+    }
+     ,
+    
+    {
+        "name": "Apple Inc.",
+        "level": "Membersihp: Gold",
+        "image": "images/apple.webp",
+        "email": "info@apple.com",
+        "phone": "(123) 456-7837",
+        "website": "https://www.apple.com/la/"
+    }
+     ,
+    
+    {
+        "name": "Lenovo",
+        "level": "Membersihp: Member",
+        "image": "images/lenovo.webp",
+        "email": "info@lenov.com",
+        "phone": "(123) 456-7818",
+        "website": "https://www.lenovo.com/ve/es/"
+    }
+     ,
+    
+    {
+        "name": "Farmatodo",
+        "level": "Membersihp: Member",
+        "image": "images/farmatodo.webp",
+        "email": "info@farm.com",
+        "phone": "(123) 456-5963",
+        "website": "https://www.farmatodo.com.ve/"
+    }
+ 
+
+
+    
+]

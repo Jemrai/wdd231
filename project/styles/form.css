@@ -1,0 +1,529 @@
+body { 
+    font-family: 'Roboto', Arial, sans-serif; 
+    margin: 0; 
+    background-color: #fff; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+header ul { display: flex; list-style: none; gap: 15px; }
+
+.hero-placeholder {
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+
+.hero-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    padding: 10px 20px;
+    background: #bbb;
+    border: none;
+    border-radius: 10px;
+}
+
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 60px;
+}
+
+#members section {
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+#members section h3 { background: #d0d0d0; padding: 5px; margin: -15px -15px 15px -15px; border-radius: 15px 15px 0 0; }
+
+.member-info-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+}
+
+.member-info-container img {
+    width: 100px;
+    height: 100px;
+    background-color: #999;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #ddd;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.footer-social { display: flex; justify-content: center; gap: 10px; }
+.footer-social img { width: 40px; border-radius: 50%; }
+.footer-info { text-align: right; }
+
+.list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0; 
+    padding: 20px;
+}
+
+.list section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 0;
+    border-radius: 0; 
+    border-bottom: 1px solid #bbb;
+    background-color: #fff; 
+    text-align: left;
+}
+
+.list section h3 {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    flex: 1; 
+}
+
+.list section .member-info-container img, 
+.list section hr,
+.list section p:first-of-type { 
+    display: none; 
+}
+
+.list section .member-info-container {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.list section div p {
+    margin: 0 10px;
+    display: inline-block; 
+}
+
+.list section:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#menu-button {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+
+#menu-button span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: 0.3s;
+}
+
+#nav-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #eee;
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    z-index: 1000;
+}
+
+#nav-menu.show {
+    display: flex;
+}
+
+#nav-menu li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 768px) {
+    #menu-button {
+        display: none; 
+    }
+
+    #nav-menu {
+        display: flex !important; 
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    #nav-menu li a {
+        border: none;
+    }
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;  
+    gap: 10px; 
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Events Section */
+.events {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.event-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Weather Section */
+.weather {
+    padding: 20px;
+    background: #e0f7fa;
+    text-align: center;
+}
+
+/* Spotlights Section */
+.spotlights {
+    padding: 20px;
+    background: #fff3e0;
+}
+
+#spotlights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.spotlight-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.spotlight-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Main */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .hero, .events, .weather, .spotlights {
+        grid-column: span 2;
+    }
+}
+
+/* Estilos específicos para join.html */
+.join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.form-section {
+    flex: 1;
+}
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0; /* Inicial para animación */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+.membership-card {
+    background: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.membership-card h4 {
+    margin-bottom: 10px;
+}
+.membership-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+@media (min-width: 768px) {
+    .join-container {
+        flex-direction: row;
+    }
+    .membership-cards {
+        flex: 1;
+        max-width: 300px;
+    }
+}
+form {
+    max-width: 600px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Corregido para W3C */
+}
+
+/* Estilos custom para modales (sin Bootstrap) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 2000; /* Sobre el menú */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparente */
+    animation: fadeIn 0.3s ease-out; /* Animación de entrada */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Centrado vertical */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Ancho responsive */
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive para modales en móviles */
+@media (max-width: 767px) {
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+        padding: 15px;
+    }
+}
+
+/* Estilos adicionales para pantallas miniatura (móviles, max-width: 767px) */
+@media (max-width: 767px) {
+    /* Header: Ajustar padding y logo para pantallas pequeñas */
+    header {
+        padding: 0.5rem; /* Reducir padding para más espacio */
+        flex-direction: column; /* Apilar logo y nav verticalmente si es necesario */
+        align-items: flex-start;
+    }
+    .logo-area {
+        gap: 5px; /* Reducir gap */
+    }
+    .logo-area img {
+        width: 40px; /* Logo más pequeño */
+    }
+    .logo-area h1 {
+        font-size: 1.2rem; /* Título más pequeño */
+    }
+    #nav-menu {
+        top: 60px; /* Ajustar posición del menú desplegable */
+    }
+
+    /* Hero y placeholders: Reducir altura y márgenes */
+    .hero-placeholder, .hero {
+        height: 200px; /* Altura más pequeña para móviles */
+        margin: 5px; /* Márgen reducido */
+    }
+    .hero-btn {
+        bottom: 10px;
+        right: 20px;
+        padding: 8px 15px; /* Botón más pequeño pero tocable */
+        font-size: 0.9rem;
+    }
+
+    /* Miembros y listas: Ajustar grid y padding para móviles */
+    #members.grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        padding: 20px; /* Padding reducido */
+        gap: 15px;
+    }
+    #members section {
+        padding: 10px; /* Padding interno reducido */
+    }
+    .list {
+        padding: 10px; /* Padding reducido */
+    }
+    .list section {
+        padding: 8px 10px; /* Padding interno reducido */
+    }
+
+    /* Footer: Cambiar a una columna para móviles */
+    footer {
+        grid-template-columns: 1fr; /* Una columna */
+        padding: 15px; /* Padding reducido */
+        font-size: 0.8rem; /* Fuente más pequeña */
+        text-align: center; /* Centrar todo */
+    }
+    .footer-contact, .footer-social, .footer-info {
+        margin-bottom: 10px; /* Espacio entre secciones */
+    }
+    .footer-social img {
+        width: 30px; /* Íconos más pequeños */
+    }
+
+    /* Secciones específicas de join.html: Mantener vertical y ajustar */
+    .join-container {
+        padding: 10px; /* Padding reducido */
+        gap: 15px; /* Gap reducido */
+    }
+    .membership-cards {
+        gap: 10px; /* Gap reducido entre tarjetas */
+    }
+    .membership-card {
+        padding: 10px; /* Padding interno reducido */
+    }
+    .membership-card h4 {
+        font-size: 1rem; /* Fuente más pequeña */
+    }
+
+    /* Formulario: Hacer inputs más grandes y tocables */
+    form {
+        max-width: 100%; /* Ocupar todo el ancho */
+    }
+    label {
+        margin-bottom: 8px; /* Margen reducido */
+    }
+    input, select, textarea {
+        padding: 10px; /* Padding interno mayor para toque fácil */
+        font-size: 1rem; /* Fuente estándar para accesibilidad */
+        box-sizing: border-box; /* Incluir padding en ancho */
+    }
+    input[type="submit"] {
+        padding: 12px; /* Botón más grande */
+        font-size: 1.1rem; /* Fuente mayor */
+        width: 100%; /* Ancho completo */
+    }
+
+    /* Eventos, clima y spotlights: Ajustar para móviles */
+    .events, .weather, .spotlights {
+        padding: 15px; /* Padding reducido */
+    }
+    .event-card, .spotlight-card {
+        padding: 10px; /* Padding interno reducido */
+        margin-bottom: 10px; /* Margen reducido */
+    }
+    #spotlights-container {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 10px; /* Gap reducido */
+    }
+    .spotlight-card img {
+        width: 80px; /* Imagen más pequeña */
+        height: 80px;
+    }
+
+    /* Botones CTA: Más grandes para toque */
+    .cta-button {
+        padding: 12px 20px; /* Padding mayor */
+        font-size: 1rem; /* Fuente mayor */
+    }
+}
