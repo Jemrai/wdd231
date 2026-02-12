@@ -63,8 +63,7 @@ function displaySpotlights(spotlights) {
             <img src="${member.image}" alt="${member.name} logo">
             <h3>${member.name}</h3>
             <p><strong>Phone:</strong> ${member.phone}</p>
-            <p><strong>Address:</strong> ${member.address}</p>
-            <p><strong>Website:</strong> <a href="${member.website}">${member.website}</a></p>
+            <p><strong>Address:</strong> ${member.email}</p>
             <p><strong>Membership:</strong> ${member.level}</p>
         </div>
     `).join('');
