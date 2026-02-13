@@ -8,3 +8,10 @@
 .thankyou-info p {
     margin: 10px 0;
 }
+.thankyou-info ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+.thankyou-info li {
+    margin: 5px 0;
+}
