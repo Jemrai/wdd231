@@ -35,37 +35,6 @@ function displayWeather(current, forecast) {
     `;
 }
 
-const membersUrl = "scripts/members.json";
-
-async function getSpotlights() {
-    try {
-        const response = await fetch(membersUrl);
-        if (!response.ok) throw new Error('Failed to load members');
-        const members = await response.json();
-        
-        const eligible = members.filter(m => m.level.includes('Gold') || m.level.includes('Silver'));
-        const selected = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
-        
-        displaySpotlights(selected);
-    } catch (error) {
-        console.error(error);
-        document.getElementById('spotlights-container').innerHTML = '<p>Unable to load spotlights.</p>';
-    }
-}
-
-function displaySpotlights(spotlights) {
-    const container = document.getElementById('spotlights-container');
-    container.innerHTML = spotlights.map(member => `
-        <div class="spotlight-card">
-            <img src="${member.image}" alt="${member.name} logo">
-            <h3>${member.name}</h3>
-            <p><strong>Phone:</strong> ${member.phone}</p>
-            <p><strong>Address:</strong> ${member.address}</p>
-            <p><strong>Website:</strong> <a href="${member.website}">${member.website}</a></p>
-            <p><strong>Membership:</strong> ${member.level}</p>
-        </div>
-    `).join('');
-}
 
 getWeather();
 getSpotlights();
