@@ -35,7 +35,6 @@ function displayWeather(current, forecast) {
     `;
 }
 
-// Spotlights (del JSON de miembros)
 const membersUrl = "scripts/members.json";
 
 async function getSpotlights() {
@@ -44,7 +43,6 @@ async function getSpotlights() {
         if (!response.ok) throw new Error('Failed to load members');
         const members = await response.json();
         
-        // Filtrar gold/silver y seleccionar 2-3 aleatorios
         const eligible = members.filter(m => m.level.includes('Gold') || m.level.includes('Silver'));
         const selected = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
         
@@ -69,11 +67,9 @@ function displaySpotlights(spotlights) {
     `).join('');
 }
 
-// Inicializar funciones
 getWeather();
 getSpotlights();
 
-// Footer dinámico
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 

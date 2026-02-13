@@ -213,7 +213,6 @@ footer {
 
 
 
-/* Hero Section */
 .hero {
     position: relative;
     height: 400px;
@@ -253,7 +252,7 @@ footer {
     background: #0056b3;
 }
 
-/* Events Section */
+
 .events {
     padding: 20px;
     background: #f9f9f9;
@@ -267,14 +266,14 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Weather Section */
+
 .weather {
     padding: 20px;
     background: #e0f7fa;
     text-align: center;
 }
 
-/* Spotlights Section */
+
 .spotlights {
     padding: 20px;
     background: #fff3e0;
@@ -300,7 +299,7 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Responsive Main */
+
 @media (min-width: 768px) {
     main {
         display: grid;

@@ -1,20 +1,18 @@
 // js/discover.js
 import { realEstateItems } from './information.mjs';
 
-// Función para calcular días entre visitas
 function getDaysSinceLastVisit() {
   const now = Date.now();
   const lastVisit = localStorage.getItem('lastVisit');
   if (!lastVisit) {
     localStorage.setItem('lastVisit', now);
-    return null; // Primera visita
+    return null; 
   }
   const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
   localStorage.setItem('lastVisit', now);
   return days;
 }
 
-// Mostrar mensaje de visita
 function displayVisitMessage() {
   const days = getDaysSinceLastVisit();
   const messageEl = document.getElementById('visit-message');
@@ -28,7 +26,6 @@ function displayVisitMessage() {
   }
 }
 
-// Generar tarjetas
 function generateCards() {
   const container = document.getElementById('cards-container');
   realEstateItems.forEach(item => {
@@ -47,12 +44,11 @@ function generateCards() {
   });
 }
 
-// Inicializar
 document.addEventListener('DOMContentLoaded', () => {
   displayVisitMessage();
   generateCards();
 });
-// Función para alternar el menú hamburguesa en móviles
+
 document.getElementById('menu-button').addEventListener('click', () => {
   const navMenu = document.getElementById('nav-menu');
   navMenu.classList.toggle('show');
