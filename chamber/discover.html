@@ -15,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/discover.css">
-  <script src="scripts/discover.js" type="module"></script>
 </head>
 <body>
   <header>
@@ -70,10 +69,6 @@
       <p>Last Modification: <span id="lastModified"></span></p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
-  </script>
+  <script src="scripts/discover.js"></script>
 </body>
 </html>
